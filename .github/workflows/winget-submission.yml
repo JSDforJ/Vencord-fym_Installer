@@ -1,14 +1,7 @@
 name: Submit to Winget Community Repo
 
 on:
-  release:
-    types: [published]
   workflow_dispatch:
-    inputs:
-      tag:
-        type: string
-        description: The release tag to submit
-        required: true
 
 jobs:
   winget:
