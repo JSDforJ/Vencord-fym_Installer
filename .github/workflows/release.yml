@@ -201,6 +201,7 @@ jobs:
         with:
           name: ${{ github.ref_name }}
           prerelease: false
+          tag_name: ${{ github.ref_name }}
           draft: false
           files: |
             linux/VencordInstallerCli-linux
