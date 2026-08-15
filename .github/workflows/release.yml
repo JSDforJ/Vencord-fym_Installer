@@ -194,14 +194,17 @@ jobs:
           name: VencordInstaller-windows
           path: windows
 
+      - name: Get short SHA
+        run: echo "SHORT_SHA=${GITHUB_SHA::7}" >> $GITHUB_ENV
+
       - name: Create the release
         uses: softprops/action-gh-release@1e07f4398721186383de40550babbdf2b84acfc5 # v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: ${{ github.sha }}
+          name: ${{ env.SHORT_SHA }}
           prerelease: false
-          tag_name: ${{ github.sha }}
+          tag_name: ${{ env.SHORT_SHA }}
           draft: false
           files: |
             linux/VencordInstallerCli-linux
