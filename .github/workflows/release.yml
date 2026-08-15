@@ -199,9 +199,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: ${{ github.ref_name }}
+          name: ${{ github.sha }}
           prerelease: false
-          tag_name: ${{ github.ref_name }}
+          tag_name: ${{ github.sha }}
           draft: false
           files: |
             linux/VencordInstallerCli-linux
