@@ -9,8 +9,6 @@ on:
         required: true
         default: 'v0.0.0'
   push:
-    tags:
-      - v*
 
 env:
   FORCE_COLOR: true
