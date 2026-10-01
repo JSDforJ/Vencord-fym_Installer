@@ -26,6 +26,10 @@ var windowsNames = map[string]string{
 
 var killLock sync.Mutex
 
+func ParseDiscordNew(p, branch string, isFlatpak bool) *DiscordInstall {
+	return nil
+}
+
 func ParseDiscord(p, branch string) *DiscordInstall {
 	entries, err := os.ReadDir(p)
 	if err != nil {
