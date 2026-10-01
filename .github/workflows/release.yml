@@ -96,7 +96,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
-    needs: [build-linux, build-mac, build-windows]
+    needs: [build-linux, build-windows]
 
     steps:
       - name: Checkout code
