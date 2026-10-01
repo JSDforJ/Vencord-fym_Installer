@@ -73,18 +73,6 @@ func ParseDiscord(p, branch string) *DiscordInstall {
 	}
 }
 
-// ParseDiscordNew mirrors the Linux signature used by the CLI for
-// custom locations and flatpak-aware paths. On Windows this simply
-// delegates to ParseDiscord and records the `isFlatpak` hint.
-func ParseDiscordNew(p, branch string, isFlatpak bool) *DiscordInstall {
-	di := ParseDiscord(p, branch)
-	if di == nil {
-		return nil
-	}
-	di.isFlatpak = isFlatpak
-	return di
-}
-
 func FindDiscords() []any {
 	var discords []any
 
